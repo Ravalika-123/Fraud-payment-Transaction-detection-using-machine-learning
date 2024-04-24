@@ -1,0 +1,67 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content: center; /* Align items horizontally at the center */
+    align-items: center; /* Align items vertically at the center */
+    height: 100vh;
+    color:white;
+    /* Set background image */
+    /*background-image: url("templates/background.jpg"); !* Replace 'background-image.jpg' with the path to your image *!*/
+    /*background-size: cover; !* This will make the background image cover the entire screen *!*/
+}
+
+
+h1{
+    color:red;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}

@@ -1,0 +1,52 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-image: url('https://www.pymnts.com/wp-content/uploads/2020/09/shutterstock_1135201928.jpg');
+            background-size: cover;
+            color: white;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Transaction Detection</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+<body>
+    <h1 style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 170px;">Fraud Transaction Detection</h1>
+    <form action="/predict" method="post">
+        <label for="transaction_type" ; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 70px;">Transaction Type:</label>
+        <select name="transaction_type" id="transaction_type">
+            <option value="0">Payment</option>
+            <option value="1">Debit</option>
+            <option value="2">Cash-in</option>
+            <option value="3">Cash-out</option>
+            <option value="4">Transfer</option>
+        </select><br><br>
+        <label for="amount"; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 15px;">Amount:</label>
+        <input type="text" name="amount" id="amount" required><br><br>
+        <label for="new_balance_sender" ; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 15px;">New Balance Sender:</label>
+        <input type="text" name="new_balance_sender" id="new_balance_sender" required><br><br>
+        <label for="old_balance_sender"; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 15px;">Old Balance Sender:</label>
+        <input type="text" name="old_balance_sender" id="old_balance_sender" required><br><br>
+        <label for="new_balance_receiver"; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 15px;">New Balance Receiver:</label>
+        <input type="text" name="new_balance_receiver" id="new_balance_receiver" required><br><br>
+        <label for="old_balance_receiver"; style="padding-top: 10px; padding-bottom: 20px; padding-left: 380px; padding-right: 15px;">Old Balance Receiver:</label>
+        <input type="text" name="old_balance_receiver" id="old_balance_receiver" required><br><br>
+        <div class="center">
+        <input type="submit" value="Submit">
+    </div>
+
+
+    </form>
+</body>
+</html>
