@@ -4,7 +4,7 @@ import numpy as np
 def main():
     st.title("Fraud Payment Transaction Detection")
 
-    transaction_type = st.selectbox("Transaction Type", ["Credit", "Debit"])
+    transaction_type = st.selectbox("Transaction Type", ["Cashout", "Transfer"])
     amount = st.number_input("Amount")
     new_balance_sender = st.number_input("New Balance Sender")
     old_balance_sender = st.number_input("Old Balance Sender")
@@ -12,7 +12,7 @@ def main():
     old_balance_receiver = st.number_input("Old Balance Receiver")
 
     if st.button("Predict"):
-        if (transaction_type == "Debit" and old_balance_receiver == 0 and new_balance_receiver == 0 and new_balance_sender == 0) or (transaction_type == "Credit" and new_balance_receiver == 0 and new_balance_sender == 0):
+        if (transaction_type == "Transfer" and old_balance_receiver == 0 and new_balance_receiver == 0 and new_balance_sender == 0) or (transaction_type == "Cashout" and new_balance_receiver == 0 and new_balance_sender == 0):
             output = "Alert!!! Fraud Transaction!"
         else:
             output = "Not a Fraud Transaction!"
